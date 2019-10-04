@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    h1, h2 {
+    font-family: Lato;
+  }
+
+  #app { position: relative; width: 320px; height: 240px; }
+
+  .draggable-container{
+    box-sizing: border-box;
+    padding : 10px;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: 2px solid black;
+    position: relative;
+    z-index: 2;
+  }
+
+  video{
+    position: absolute;
+    z-index: 0;
+  }
+
+  img {
+    max-height: 50px;
+
+  }
+
+
+  .image-container{
+    z-index: 3
+  }
+  .image-container:after{
+    content: "";
+    height:100%;
+    width: 100%;
+    
+  }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="app" class="ui-widget-content">
+   <video width="320" height="240" >
+
+  </video>
+  <div  class="draggable-container">
+    <p id="draggable" class="image-container">
+      
+   <!-- drag it -->
+    <img class="image" src="https://cdn11.bigcommerce.com/s-x49po/images/stencil/1280x1280/products/23721/36126/1502732008695_DSC_0016__06515.1502947409.jpg?c=2&imbypass=on"  />
+
+     </p>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>
